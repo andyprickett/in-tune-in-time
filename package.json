@@ -18,11 +18,11 @@
   },
   "homepage": "https://github.com/andyprickett/in-tune-in-time#readme",
   "devDependencies": {
-    "jasmine": "^3.0.0",
-    "request": "^2.83.0"
+    "jasmine": "^3.2.0",
+    "request": "^2.88.0"
   },
   "dependencies": {
-    "dotenv": "^5.0.0",
-    "express": "^4.16.2"
+    "dotenv": "^5.0.1",
+    "express": "^4.16.4"
   }
 }
