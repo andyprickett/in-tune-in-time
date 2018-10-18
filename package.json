@@ -1,0 +1,28 @@
+{
+  "name": "in-tune-in-time",
+  "version": "1.0.0",
+  "description": "App for finding tempos and keys based on frequency.",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "export NODE_ENV=test && jasmine",
+    "start": "node src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andyprickett/in-tune-in-time.git"
+  },
+  "author": "Andy Prickett",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andyprickett/in-tune-in-time/issues"
+  },
+  "homepage": "https://github.com/andyprickett/in-tune-in-time#readme",
+  "devDependencies": {
+    "jasmine": "^3.0.0",
+    "request": "^2.83.0"
+  },
+  "dependencies": {
+    "dotenv": "^5.0.0",
+    "express": "^4.16.2"
+  }
+}
