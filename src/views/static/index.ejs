@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <% include ./partials/head.ejs %>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <% include ./partials/navbar.ejs %>
+
+    <!-- Page Content -->
+    <main class="container">
+
+      <!-- Jumbotron Header -->
+      <header class="jumbotron my-4">
+        <h1 class="display-3">Welcome to In Tune In Time</h1>
+        <p class="lead">Match your music to the right tempo.</p>
+      </header>
+
+      <!-- Page Features -->
+      <section class="row text-center">
+
+        <section class="col-lg-4">
+          <h4 class="card-title">Note to Tempo</h4>
+          <p class="card-text">Choose a note and get the tempo that's in time with its frequency.</p>
+        </section>
+
+        <section class="col-lg-4">
+          <h4 class="card-title">Key to Notes</h4>
+            <p class="card-text">Find the notes and their respective tempos for your chosen key.</p>
+        </section>
+
+        <section class="col-lg-4">
+          <h4 class="card-title">Note to Keys</h4>
+          <p class="card-text">See all of the keys the note you've chosen will work in.</p>
+        </section>
+
+      </section>
+      <!-- /.row -->
+
+    </main>
+    <!-- /.container -->
+
+    <% include ./partials/baseScripts.ejs %>
+  </body>
+</html>
