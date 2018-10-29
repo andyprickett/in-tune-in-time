@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <% include ../static/partials/head.ejs %>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <% include ../static/partials/navbar.ejs %>
+
+    <!-- Page Content -->
+    <main class="container">
+
+      <!-- Jumbotron Header -->
+      <header class="jumbotron my-4">
+        <h1 class="display-6">Tempo to Notes</h1>
+        <p class="lead">Have a tempo you're already working in? Every musical note has a corresponding frequency expressed in Hertz, otherwise know as "cycles per second". The waveform of the note's pitch completes its cycle a certain amount of times per second. This is expressed in a decimal number, and can be used to find the related tempo ("beats per minute") that a note's pitch ideally completes its cycle in time with. Choose your tempo, and find the nearest two notes (and their corresponding tempos) that are aligned with it.</p>
+        <p class="text-muted text-right">(Pitch reference is A=440Hz. Don't see your tempo? Try dividing or multiplying it by 2.)</p>
+      </header>
+
+      <!-- Page Feature -->
+      <section class="row justify-content-center text-center">
+        <form >
+          <div class="form-group"></div>
+            <label class="my-1 mr-2" for="noteSelect" style="font-size: 2em">
+              Choose a Tempo:
+            </label>
+            <select class="form-control form-control-lg" id="noteSelect">
+              <% for (let i = 60; i < 120; i++) { %>
+                <option value="<%= i %>"><%= i %></option>
+              <% } %>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary mt-2 btn-lg">Submit</button>
+        </form>
+      </section>
+      <!-- /.row -->
+
+    </main>
+    <!-- /.container -->
+
+    <% include ../static/partials/baseScripts.ejs %>
+  </body>
+</html>
