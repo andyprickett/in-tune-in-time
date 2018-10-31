@@ -18,29 +18,50 @@
       </header>
 
       <!-- Page Feature -->
+
       <section class="row justify-content-center text-center">
-        <form >
-          <div class="form-group"></div>
-            <label class="my-1 mr-2" for="noteSelect" style="font-size: 2em">
-              Choose a Note:
-            </label>
-            <select class="form-control form-control-lg" id="noteSelect">
-              <option value="C">C</option>
-              <option value="Db">C#/Db</option>
-              <option value="D">D</option>
-              <option value="Eb">D#/Eb</option>
-              <option value="E">E</option>
-              <option value="F">F</option>
-              <option value="Gb">F#/Gb</option>
-              <option value="G">G</option>
-              <option value="Ab">G#/Ab</option>
-              <option value="A">A</option>
-              <option value="Bb">A#/Bb</option>
-              <option value="B">B</option>
-            </select>
-          </div>
-          <button type="submit" class="btn btn-primary mt-2 btn-lg">Submit</button>
-        </form>
+         <h2>Choose a Note:</h2>
+      </section>
+      <!-- /.row -->
+
+      <section class="row justify-content-center text-center mb-3">
+      
+        <section class="col-lg-2">
+          <ul class="list-group">
+            <% notes.forEach((note, index) => { %>
+              <% if (index <= 3) { %>
+                <li class="list-group-item border-0">
+                  <a href="/notes/<%= note.id %>" class="btn btn-primary btn-lg" role="button" style="width: 100px;"><%= note.name %></a>
+                </li>
+              <% } %>
+            <% }) %>
+          </ul>
+        </section>
+
+        <section class="col-lg-2">
+          <ul class="list-group">
+            <% notes.forEach((note, index) => { %>
+              <% if (index > 3 && index < 8) { %>
+                <li class="list-group-item border-0">
+                  <a href="/notes/<%= note.id %>" class="btn btn-primary btn-lg" role="button" style="width: 100px;"><%= note.name %></a>
+                </li>
+              <% } %>
+            <% }) %>
+          </ul>
+        </section>
+
+        <section class="col-lg-2">
+          <ul class="list-group">
+            <% notes.forEach((note, index) => { %>
+              <% if (index >= 8) { %>
+                <li class="list-group-item border-0">
+                  <a href="/notes/<%= note.id %>" class="btn btn-primary btn-lg" role="button" style="width: 100px;"><%= note.name %></a>
+                </li>
+              <% } %>
+            <% }) %>
+          </ul>
+        </section>
+
       </section>
       <!-- /.row -->
 
