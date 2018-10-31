@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <% include ../static/partials/head.ejs %>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <% include ../static/partials/navbar.ejs %>
+
+    <!-- Page Content -->
+    <main class="container">
+
+      <!-- Jumbotron Header -->
+      <header class="jumbotron my-4">
+        <h1 class="display-6">Note to Tempo</h1>
+        <p class="lead">Every musical note has a corresponding frequency expressed in Hertz, otherwise know as "cycles per second". The waveform of the note's pitch completes its cycle a certain amount of times per second. This is expressed in a decimal number, and can be used to find the related tempo ("beats per minute") that a note's pitch ideally completes its cycle in time with. Choose a note, and find the tempo that it aligns with.</p>
+        <p class="text-muted text-right">(Pitch reference is A=440Hz.)</p>
+      </header>
+
+      <!-- Page Feature -->
+      <section class="row justify-content-center text-center">
+        <h2>Tempo for <%= note.name %>:</h2>
+      </section>
+      <!-- /.row -->
+
+      <section class="row justify-content-center text-center">
+        <h2><%= note.tempo %> bpm</h2>
+      </section>
+      <!-- /.row -->
+
+      <section class="row justify-content-center text-center">
+        <a href="/notes %>" class="btn btn-primary btn-sm" role="button">Choose another Note</a>
+      </section>
+      <!-- /.row -->
+
+      <hr>
+      <section class="row justify-content-center">
+        <p class="col-lg-4">What about the decimal places, are they important? Yes, include them in your tempo settings, if possible.</p>
+        <p class="col-lg-4">If the tempo presented isn't in the range you're looking for, try multiplying or dividing it by 2 and you'll get there.</p>
+      </section>
+    </main>
+    <!-- /.container -->
+
+    <% include ../static/partials/baseScripts.ejs %>
+  </body>
+</html>
