@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <% include ../static/partials/head.ejs %>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <% include ../static/partials/navbar.ejs %>
+
+    <!-- Page Content -->
+    <main class="container">
+
+      <!-- Jumbotron Header -->
+      <header class="jumbotron my-4">
+        <h1 class="display-6">Key to Notes</h1>
+        <p class="lead">Every musical key includes a group of notes that each has a corresponding frequency expressed in Hertz, otherwise know as "cycles per second". The waveform of the note's pitch completes its cycle a certain amount of times per second. This is expressed in a decimal number, and can be used to find the related tempo ("beats per minute") that a note's pitch ideally completes its cycle in time with. Choose a key, and find the notes (and their corresponding tempos) that are aligned with it.</p>
+        <p class="text-muted text-right">(Pitch reference is A=440Hz. Major scale notes only.)</p>
+      </header>
+
+      <!-- Page Feature -->
+      <section class="row justify-content-center text-center">
+        <h2>Notes for <%= key.name %>:</h2>
+      </section>
+      <!-- /.row -->
+      
+      <section class="row justify-content-center text-center">
+        <table class="table table-bordered w-50">
+          <thead>
+            <tr>
+              <th scope="col">Note</th>
+              <th scope="col">Tempo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% key.notes.forEach((note) => { %>
+              <tr>
+                <th scope="row"><%= note.name %></th>
+                <td><%= note.tempo %></td>
+              </tr>
+            <% }); %>
+          </tbody>
+        </table>
+      </section>
+      <!-- /.row -->
+
+      <section class="row justify-content-center text-center">
+        <a href="/keys %>" class="btn btn-primary btn-sm" role="button">Choose another Key</a>
+      </section>
+      <!-- /.row -->
+
+      <hr>
+
+      <section class="row justify-content-center">
+        <p class="col-lg-4">What about the decimal places, are they important? Yes, include them in your tempo settings, if possible.</p>
+        <p class="col-lg-4">If the tempo presented isn't in the range you're looking for, try multiplying or dividing it by 2 and you'll get there.</p>
+      </section>
+    </main>
+    <!-- /.container -->
+
+    <% include ../static/partials/baseScripts.ejs %>
+  </body>
+</html>

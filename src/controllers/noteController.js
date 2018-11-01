@@ -1,12 +1,12 @@
 const noteQueries = require("../db/queries.notes.js");
 
-function calculatedTempo(frequency) {
+const calculatedTempo = ((frequency) => {
   let tempo = frequency * 60;
   while (tempo > 120) {
     tempo = tempo / 2;
   }
   return tempo.toFixed(3);
-}
+});
 
 module.exports = {
   index(req, res, next) {
